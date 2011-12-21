@@ -8,7 +8,7 @@ func main() {
 
 	OptErr = 0
 	for {
-		if c = Getopt("a:bh"); c == -1 {
+		if c = Getopt("a:bh"); c == EOF {
 			break
 		}
 		switch c {

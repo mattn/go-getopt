@@ -22,10 +22,10 @@ func Getopt(opts string) int {
 		if OptInd >= argc ||
 			(len(argv[0]) > 0 && argv[OptInd][0] != '-') ||
 			len(argv[0]) == 1 {
-			return -1
+			return EOF
 		} else if argv[OptInd] == "--" {
 			OptInd++
-			return -1
+			return EOF
 		}
 	}
 	c = argv[OptInd][sp]
