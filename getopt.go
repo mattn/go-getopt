@@ -33,7 +33,7 @@ func Getopt(opts string) int {
 	cp = strings.Index(opts, string(c))
 	if c == ':' || cp == -1 {
 		if OptErr != 0 {
-			println(": illegal option --", c)
+			println(": illegal option --", string(c))
 		}
 		sp++
 		if len(argv[OptInd]) == sp {
@@ -51,7 +51,7 @@ func Getopt(opts string) int {
 			OptInd++
 			if OptInd >= argc {
 				if OptErr != 0 {
-					println(": option requires an argument --", c)
+					println(": option requires an argument --", string(c))
 				}
 				sp = 1
 				return '?'
