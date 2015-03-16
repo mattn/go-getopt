@@ -45,7 +45,7 @@ func Getopt(opts string) int {
 	cp++
 	if cp < len(opts) && opts[cp] == ':' {
 		if len(argv[OptInd]) > sp+1 {
-			OptArg = argv[OptInd][sp+1 :-1]
+			OptArg = argv[OptInd][sp+1 : sp+2]
 			OptInd++
 		} else {
 			OptInd++
